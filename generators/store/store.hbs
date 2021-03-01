@@ -1,0 +1,17 @@
+/**
+ * {{FILE_DESC}}
+ */
+
+import { action, observable } from "mobx";
+
+class {{pascalCase FILE_NAME}} {
+  @observable variable = 0
+
+  @action
+  actionFunc() {
+    this.variable++
+  }
+
+}
+
+export default {{pascalCase FILE_NAME }}

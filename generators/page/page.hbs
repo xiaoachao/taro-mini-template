@@ -1,0 +1,36 @@
+/**
+ * {{FILE_DESC}}
+ */
+
+{{#if IS_STORE}}
+import { useStores } from '~/store'
+import { observer } from 'mobx-react'
+{{/if}}
+import React, { useState, useEffect } from 'react'
+import { View } from '@tarojs/components'
+import './{{camelCase FILE_NAME}}.scss'
+
+
+function {{pascalCase FILE_NAME}}() {
+	const [variable, setVariable] = useState('welcome to')
+	{{#if IS_STORE}}
+	const {someStore} = useStores()
+	{{/if}}
+
+	useEffect(() => {
+		// do somethings
+  }, [])
+
+	return (
+		<View className='{{camelCase DIR_NAME}}-{{camelCase FILE_NAME}}-page'>
+			<View>{{FILE_DESC}} </View>
+		</View>
+	)
+}
+
+{{#if IS_STORE}}
+export default observer({{pascalCase FILE_NAME}})
+{{else}}
+export default {{pascalCase FILE_NAME}}
+{{/if}}
+
