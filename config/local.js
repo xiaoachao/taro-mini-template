@@ -1,6 +1,6 @@
 const config = {
 	env: {
-		NODE_ENV: '"local"'
+		NODE_ENV: '"local"',
 	},
 	h5: {
 		devServer: {
